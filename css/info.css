@@ -33,14 +33,22 @@
 }
 
 /*==================================================
- センターからのお知らせ
+ センターからのお知らせ 一覧,
+ 助成金情報  一覧,
 =============================================== */
 
-/* h2 */
+/* h2===================== */
+
+/* センターからのお知らせ */
 #pagetitle.news .container .h2{
 	background-image: url(../images/bg_pagetitle_news.png) ;
 }
+/* 助成金 */
+#pagetitle.joseikin .container .h2{
+	background-image: url(../images/bg_pagetitle_joseikin.png) ;
+}
 
+/* main===================== */
 #titlelist .container{
 	max-width: 900px ;
 }
@@ -106,7 +114,7 @@
 	}
 }
 
-/* pagenation=============================================== */
+/* pagenation======================= */
 
 .pagenation{
 	margin-bottom: 40px ;
@@ -141,7 +149,7 @@ nav.pager ul li.next a::after{
 	right: -15px ;
 }
 
-/* お知らせ詳細======================================================== */
+/* お知らせ詳細========================= */
 
 .detail_haed{
 	margin-bottom: 30px ;
@@ -168,7 +176,7 @@ nav.pager ul li.next a::after{
 p.text_moredetail{
 	line-height: 1.7em ;
 	border-bottom: #e6e6e6 solid 1px ;
-	padding-bottom: 15px ;
+	padding: 10px 0 20px 0 ;
 	margin-bottom: 0 ;
 }
 dl.file,
@@ -230,4 +238,31 @@ dl.url dt::before{
 }
 .btn_pageback a:hover{
 	text-decoration: none ;
+}
+
+@media (max-width: 767px){
+	.detail_haed{
+		margin-bottom: 20px ;
+	}
+	.detail_haed .title{
+		font-size: 1.8rem ;
+	}
+	.detail_body .information{
+		padding: 15px ;
+	}
+	dl.file,
+	dl.url{
+		display: block ;
+	}
+	dl.file dt,
+	dl.url dt,
+	dl.file dd,
+	dl.url dd{
+		display: block ;
+		width: 100% ;
+	}
+	dl.file dt,
+	dl.url dt{
+		margin-bottom: 10px ;
+	}
 }
