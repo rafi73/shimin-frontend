@@ -58,9 +58,8 @@
 .news_contents dl{
 	display: table ;
 	margin-bottom: 0 ;
-	border-top: #e7d8bc 1px dashed ;
 	width: 100% ;
-	padding: 18px 0 ;
+	padding: 15px 0 ;
 }
 .news_contents dl dt{
 	display: table-cell ;
@@ -114,99 +113,8 @@
 	}
 }
 
-/* pagenation======================= */
-
-.pagenation{
-	margin-bottom: 40px ;
-}
-nav.pager ul{
-	text-align: center;
-}
-nav.pager ul li{
-	display: inline-block ;
-	padding: 5px ;
-}
-nav.pager ul li a{
-	padding: 5px ;
-	text-decoration: underline ;
-	position: relative ;
-}
-nav.pager ul li a:hover,
-nav.pager ul li.active a{
-	text-decoration: none ;
-	color: #1b89e7 ;
-}
-nav.pager ul li.previous a::before{
-	font-family: 'Font Awesome 5 Free' ;
-	content: "\f137" ;
-	position: absolute ;
-	left: -15px ;
-}
-nav.pager ul li.next a::after{
-	font-family: 'Font Awesome 5 Free' ;
-	content: "\f138" ;
-	position: absolute ;
-	right: -15px ;
-}
-
 /* お知らせ詳細========================= */
 
-.detail_haed{
-	margin-bottom: 30px ;
-}
-.detail_haed p.day{
-	margin-bottom: 5px ;
-}
-.detail_haed .title{
-	font-size: 2.5rem ;
-	line-height: 1.4em ;
-	margin-bottom: 15px; 
-}
-.detail_body{
-	max-width: 1000px ;
-	margin-bottom: 30px ;
-	margin-left: auto ;
-	margin-right: auto ;
-}
-.detail_body .information{
-	padding: 30px ;
-	border: #eee 2px solid ;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) ;
-}
-p.text_moredetail{
-	line-height: 1.7em ;
-	border-bottom: #e6e6e6 solid 1px ;
-	padding: 10px 0 20px 0 ;
-	margin-bottom: 0 ;
-}
-dl.file,
-dl.url{
-	display: table ;
-	padding: 20px 0 ;
-	width: 100% ;
-	margin-bottom: 0 ;
-}
-dl.file dt,
-dl.url dt{
-	display: table-cell ;
-	width: 120px ;
-}
-dl.file dd,
-dl.url dd{
-	display: table-cell ;
-}
-dl.file dd a,
-dl.url dd a{
-	text-decoration: underline ;
-	color: #1b89e7 ;
-}
-dl.file dd a:hover,
-dl.url dd a:hover{
-	text-decoration: none ;
-}
-dl.file{
-	border-bottom: #e6e6e6 1px solid ;
-}
 dl.file dt::before,
 dl.url dt::before{
 	font-family: 'Font Awesome 5 Free' ;
@@ -219,50 +127,3 @@ dl.url dt::before{
 	content: "\f108" ;
 }
 
-/* btnpageback================================== */
-
-.btn_pageback{
-	display: block; 
-	width: 100% ;
-	text-align: right ;
-	margin-bottom: 30px ;
-}
-.btn_pageback a{
-	color: #1b89e7 ;
-	text-decoration: underline ;
-}
-.btn_pageback a::before{
-	font-family: 'Font Awesome 5 Free' ;
-	margin-right: 5px ;
-	content: "\f138";
-}
-.btn_pageback a:hover{
-	text-decoration: none ;
-}
-
-@media (max-width: 767px){
-	.detail_haed{
-		margin-bottom: 20px ;
-	}
-	.detail_haed .title{
-		font-size: 1.8rem ;
-	}
-	.detail_body .information{
-		padding: 15px ;
-	}
-	dl.file,
-	dl.url{
-		display: block ;
-	}
-	dl.file dt,
-	dl.url dt,
-	dl.file dd,
-	dl.url dd{
-		display: block ;
-		width: 100% ;
-	}
-	dl.file dt,
-	dl.url dt{
-		margin-bottom: 10px ;
-	}
-}

@@ -88,7 +88,7 @@ $(function () {
 
 //header transform
 $(function() {
-  var dist = 80;
+  var dist = 90;
   $(window).scroll(function() {
     if ($(window).scrollTop() > dist) {
       $('#global_nav').addClass('scrol');
@@ -107,6 +107,20 @@ $(function() {
     }
     else {
       $('#global_nav.home').removeClass('scrol');
+    }
+  });
+});
+
+
+// sidenav transrate
+$(function() {
+  var dist = 280;
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > dist) {
+      $('#sidenav_affix').addClass('affix');
+    }
+    else {
+      $('#sidenav_affix').removeClass('affix');
     }
   });
 });
