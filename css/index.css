@@ -494,7 +494,7 @@
 }
 .topic-list .item a:hover{
 	border-color: #1b89e7 ;
-	box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2) ;
+	box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1) ;
 }
 .topic-list .item a:hover p.title{
 	color: #1b89e7 ;

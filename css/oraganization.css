@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+/*==================================================
+団体そさがす
+================================================== */
+
+/* h2 */
+#pagetitle.oraganization .container .h2{
+	background-image: url(../images/bg_pagetitle_oraganization.png) ;
+}
+.maincontents.oraganization .container{
+	display: table ;
+}
+.sidenav{
+	display: table-cell ;
+	width: 260px ;
+	height: 360px ;
+	vertical-align: top ;
+}
+.oraganization_list{
+	display: table-cell ;
+	padding-left: 40px ;
+	vertical-align: top ;
+}
+@media (max-width: 991px){
+	.maincontents.oraganization .container,
+	.sidenav,
+	.oraganization_list{
+		display: block ;
+		width: 100% ;
+	}
+	.sidenav{
+		height: auto ;
+	}
+	.oraganization_list{
+		padding-left: 0 ;
+	}
+}
+
+/* sidenav============================================ */
+
+@media (max-width: 767px){
+	.sort_panel .body dl.input-group{
+		width: 100% ;
+		padding-right: 0 ;
+		border-bottom-width: 1px ;
+		margin-bottom: 10px ;
+	}
+	.sort_panel .body dl.input-group dd label{
+		width: 50% ;
+		float: left ;
+	}
+}
+
+/* topic list============================================== */
+
+.oraganization_body{
+	margin-bottom: 30px ;
+	width: 100% ;
+	display: flex ;
+    flex-wrap: wrap ;
+}
+.oraganization_body .item{
+	width: 50% ;
+	padding: 5px ;
+}
+.oraganization_body .item a{
+	display: block ;
+	width: 100% ;
+	padding: 13px ;
+	border-radius: 3px ;
+	border: #e6e6e6 solid 1px ;
+	font-size: 1.6rem ;
+	position: relative ;
+	line-height: 1.3em ;
+}
+/* .oraganization_body .item a::after{
+	content: "\f138  詳細 " ;
+	font-family: 'Font Awesome 5 Free' , "游ゴシック", YuGothic, 'Hiragino Kaku Gothic Pro', Meiryo , sans-serif ;
+	font-size: 1.4rem ;
+	position: absolute ;
+	right: 10px ;
+	color: #ccc ;
+	transition: all 0.3s ;
+} */
+.oraganization_body .item a:hover{
+	border-color: #1b89e7 ;
+	color: #1b89e7 ;
+	box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1) ;
+}
+.oraganization_body .item a:hover::after{
+	color: #1b89e7 ;
+}
+
+
+@media (max-width: 767px){
+	.oraganization_body .item{
+		width: 50% ;
+	}
+	.oraganization_body .item a{
+		padding: 8px ;
+		font-size: 1.3rem ;
+	}
+}
+
+/*==================================================
+詳細
+================================================== */
+
+/* o_detail_haed=============================== */
+
+.o_detail_head{
+	max-width: 1100px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	margin-bottom: 30px ;
+}
+.o_detail_head .name{
+	font-size: 1.8em ;
+	margin-bottom: 20px ;
+	line-height: 1em ;
+}
+.o_detail_head .pr{
+	font-size: 1.05em ;
+	line-height: 1.4em ;
+	margin-bottom: 25px ;
+}
+.o_detail_head dl.cate dt{
+	margin-bottom: 10px ;
+	color: #1b89e7 ;
+}
+.o_detail_head dl.cate dt::before{
+	font-family: 'Font Awesome 5 Free' ;
+	content: "\f02c" ;
+	margin-right: 5px ;
+	line-height: 1.4em ;
+}
+.o_detail_head dl.cate dd{
+	line-height: 1.4em ;
+}
+.o_detail_head dl.cate dd span{
+	padding-left: 22px ;
+	position: relative ;
+	display: inline-block ;
+}
+.o_detail_head dl.cate dd span::after{
+	content: "、"
+}
+.o_detail_head dl.cate dd span:last-child::after{
+	content: none ;
+}
+
+/* o_detail_body=================================================== */
+
+.o_detail_body{
+	margin-bottom: 20px ;
+}
+.o_detail_body .information{
+	max-width: 1050px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	padding: 10px ;
+}
+.o_detail_body .information dl{
+	width: 100% ;
+	padding: 10px 0 ;
+	display: flex ;
+	margin-bottom: 0 ;
+	border-bottom: #e6e6e6 1px solid ;
+}
+.o_detail_body .information dl dt{
+	min-width: 130px ;
+	line-height: 1.4em ;
+	margin-bottom: 0 ;
+}
+.o_detail_body .information dl dd{
+	line-height: 1.4em ;
+	margin-bottom: 0 ;
+	font-weight: 500 ;
+}
+.o_detail_body .information dl dd a{
+	color: #1b89e7 ;
+	text-decoration: underline ;
+	width: 100% ;
+	display: inline-block;
+}
+.o_detail_body .information dl dd a:hover{
+	text-decoration: none ;
+}
+
+/* 代表者名フリガナ */
+.o_detail_body .information dl dd span.ruby{
+	padding-left: 10px ;
+	font-size: 0.8em ;
+}
+/* 会員数 */
+.o_detail_body .information dl.member dd span::after{
+	content: "、" ;
+}
+.o_detail_body .information dl.member dd span:last-child::afterr{
+	content: none ;
+}
+.o_detail_body .information dl.member dd span::before{
+	font-family: 'Font Awesome 5 Free' ;
+	margin-right: 5px ;
+	font-weight: bold ;
+	font-size: 1.1em ;
+}
+.o_detail_body .information dl.member dd span.man::before{
+	content: "\f183" ;
+	color: #4176d9 ;
+}
+.o_detail_body .information dl.member dd span.lady::before{
+	content: "\f182" ;
+	color: #f4439b ;
+}
+.o_detail_body .information dl.member dd span.total::before{
+	content: "\f0c0" ;
+	color: #2fbba0 ;
+}
+/*活動報告書*/
+.o_detail_body .information dl.report dd a{
+	position: relative ;
+	padding-left: 25px ;
+	margin-bottom: 10px ;
+}
+.o_detail_body .information dl.report dd a::before{
+	content: url(../images/ico_pdf.png) ;
+	position: absolute ;
+	left: 0 ;
+	top: 0 ;
+}
+
+
+/* tab reset===================== */
+
+.nav-tabs.oraganization{
+	padding: 0 10px ;
+	border-color: #1b89e7 ;
+}
+.nav-tabs.oraganization .nav-item{
+	padding: 0 5px ;
+}
+.nav-tabs.oraganization .nav-link{
+	padding: 10px 15px ;
+	background-color: #f1f1f1 ;
+	color: #1b89e7 ;
+	min-width: 130px ;
+	text-align: center ;
+	border-bottom-color: #1b89e7 ;
+}
+.nav-tabs.oraganization .nav-link.active{
+	background-color: #fff ;
+	border-color: #1b89e7 #1b89e7 #fff ;
+}
+.tab-content.oraganization .tab-pane{
+	padding-top: 30px ;
+}
+
+
+@media (max-width: 767px){
+	.o_detail_head .pr{
+		font-size: 0.9em ;
+	}
+	.o_detail_body .information dl{
+		display: block ;
+	}
+	.o_detail_body .information dl dt{
+		margin-bottom: 5px ;
+	}
+	.nav-tabs.oraganization{
+		padding: 0 5px ;
+	}
+	.nav-tabs.oraganization .nav-item{
+		width: 50% ;
+	}
+	.nav-tabs.oraganization .nav-link{
+		min-width: inherit ;
+		padding: 10px 5px ;
+	}
+}

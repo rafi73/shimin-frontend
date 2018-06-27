@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>宮崎市民活動センター</title>
+    <title>事業報告 | 宮崎市民活動センター</title>
     <!-- discription -->
-	<meta name="description" content="宮崎市民活動センターは、宮崎市民のボランティアやNPO、NGOなど、幅広い活動を総合的に支援します。" />
+	<meta name="description" content="宮崎市民活動センターは、宮座k市民のボランティアやNPO、NGOなど、幅広い活動を総合的に支援します。" />
 	<!-- viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- favicon -->
@@ -14,15 +14,16 @@
 	<link rel="stylesheet" type="text/css" href="../css/slider-pro.css">
 	<link rel="stylesheet" type="text/css" href="../css/fontawesome-all.css">
 	<link rel="stylesheet" type="text/css" href="../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../css/info.css">
+	<link rel="stylesheet" type="text/css" href="../css/report.css">
 	<!-- js -->
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/jquery.sliderPro.js"></script>
+    <script src="../js/scrol-fixed.js"></script>
     <script src="../js/script.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#year-btns">
 
 <!-- header -->
 <div id="header">
@@ -60,7 +61,7 @@
 						<span class="t">HOME</span>
 					</a>
 				</li>
-				<li class="open">
+				<li>
 					<a class="toggle">
 						<span class="i"></span>
 						<span class="t">センター案内</span>
@@ -109,10 +110,10 @@
 
 <!-- pagetitle -->
 
-<div id="pagetitle" class="centerinfo">
+<div id="pagetitle" class="report">
 	<div class="container">
 		<div class="h2">
-			<h2>宮崎市民活動センターとは</h2>
+			<h2>事業報告</h2>
 		</div>
 	</div>
 </div>
@@ -123,26 +124,187 @@
 	<div class="container">
 		<ol class="topicpath">
 			<li><a href="../index.html">HOME</a></li>
-			<li>宮崎市民活動センターとは</li>
+			<li>事業報告</li>
 		</ol>
 	</div>
 </div>
 
 <!-- main contents -->
 
-<div id="maininfomation" class="maincontents">
+<div class="maincontents report">
 	<div class="container">
-		<div class="block top">
-			<p>市民活動をとおした市民交流の広場です。<br>
-				<span class="b">ボランティア</span>や<span class="b">NPO</span>、<span class="b">NGO</span>など、幅広い市民活動を総合的に支援します。</p>
-			<p><img src="../images/illust_centermaininfo.png" alt="宮崎市民活動センター" class="img_responsive"></p>
-			<p>市民の皆さんのこんな思いを形にしていくところです。<br>
-				買い物ついでに、仕事帰りに、皆さんのご都合に合わせて<span class="o">朝9時</span>から<span class="n">夜10時</span>まで、いつでもご利用いただけます。<br>
-				どうぞお気軽においでください。</p>
+		
+		<!-- side nav -->
+		<div class="sidenav">
+			<div id="sidenav_affix" class="rep">
+				<div id="year-btns" class="list-group">
+					<ul class="year_btns">
+						<li>
+							<a class="list-group-item list-group-item-action" href="#h29">平成29年度</a>
+						</li>
+						<li>
+							<a class="list-group-item list-group-item-action" href="#h28">平成28年度</a>
+						</li>
+						<li>
+							<a class="list-group-item list-group-item-action" href="#h27">平成27年度</a>
+						</li>
+						<li>
+							<a class="list-group-item list-group-item-action" href="#h26">平成26年度</a>
+						</li>
+						<li>
+							<a class="list-group-item list-group-item-action" href="#h25">平成25年度</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="block">
-			<h3></h3>
-			<div></div>
+		
+		<!-- oraganization list -->
+		<div class="report_list">
+			
+			<div class="report_body">
+				<div data-spy="scroll" data-target="#year-btns" data-offset="100" class="scrollspy-example">
+					
+					<!-- H29 -->
+					<div class="y_block" id="h29">
+						<p class="yearnumber">平成29年度</p>
+						<div class="reports">
+							<p class="title">市民活動講座</p>
+							<ul>
+								<li><a href="#" target="_blank">宮崎市市民活動 支援補助金勉強会</a></li>
+								<li><a href="#" target="_blank">NPO法人基礎講座</a></li>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">ボランティア講座</p>
+							<ul>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">災害時救援ボランティアコーディネーター養成講座</p>
+							<ul>
+								<li><a href="#" target="_blank">要請講座</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- H28 -->
+					<div class="y_block" id="h28">
+						<p class="yearnumber">平成28年度</p>
+						<div class="reports">
+							<p class="title">市民活動講座</p>
+							<ul>
+								<li><a href="#" target="_blank">宮崎市市民活動 支援補助金勉強会</a></li>
+								<li><a href="#" target="_blank">NPO法人基礎講座</a></li>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">ボランティア講座</p>
+							<ul>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+								<li><a href="#" target="_blank">綾の森でボランティアをしよう！</a></li>
+								<li><a href="#" target="_blank">さあ　ボランティア体験をやってみよう！</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">災害時救援ボランティアコーディネーター養成講座</p>
+							<ul>
+								<li><a href="#" target="_blank">要請講座</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- H27 -->
+					<div class="y_block" id="h27">
+						<p class="yearnumber">平成27年度</p>
+						<div class="reports">
+							<p class="title">市民活動講座</p>
+							<ul>
+								<li><a href="#" target="_blank">宮崎市市民活動 支援補助金勉強会</a></li>
+								<li><a href="#" target="_blank">NPO法人基礎講座</a></li>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">ボランティア講座</p>
+							<ul>
+								<li><a href="#" target="_blank">災害ボランティア講座</a></li>
+								<li><a href="#" target="_blank">ボランティア入門講座</a></li>
+								<li><a href="#" target="_blank">環境ボランティア講座</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">災害時救援ボランティアコーディネーター養成講座</p>
+							<ul>
+								<li><a href="#" target="_blank">要請講座</a></li>
+								<li><a href="#" target="_blank">要請講座</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- H26 -->
+					<div class="y_block" id="h26">
+						<p class="yearnumber">平成26年度</p>
+						<div class="reports">
+							<p class="title">市民活動講座</p>
+							<ul>
+								<li><a href="#" target="_blank">宮崎市市民活動 支援補助金勉強会</a></li>
+								<li><a href="#" target="_blank">NPO法人基礎講座</a></li>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">ボランティア講座</p>
+							<ul>
+								<li><a href="#" target="_blank">災害ボランティア講座</a></li>
+								<li><a href="#" target="_blank">ボランティア入門講座</a></li>
+								<li><a href="#" target="_blank">環境ボランティア講座</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">災害時救援ボランティアコーディネーター養成講座</p>
+							<ul>
+								<li><a href="#" target="_blank">要請講座</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- H25 -->
+					<div class="y_block" id="h25">
+						<p class="yearnumber">平成25年度</p>
+						<div class="reports">
+							<p class="title">市民活動講座</p>
+							<ul>
+								<li><a href="#" target="_blank">宮崎市市民活動 支援補助金勉強会</a></li>
+								<li><a href="#" target="_blank">NPO法人基礎講座</a></li>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+								<li><a href="#" target="_blank">宮崎市市民活動 支援補助金勉強会</a></li>
+								<li><a href="#" target="_blank">NPO法人基礎講座</a></li>
+								<li><a href="#" target="_blank">ボランティア体験交流会</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">ボランティア講座</p>
+							<ul>
+								<li><a href="#" target="_blank">災害ボランティア講座</a></li>
+								<li><a href="#" target="_blank">ボランティア入門講座</a></li>
+								<li><a href="#" target="_blank">環境ボランティア講座</a></li>
+							</ul>
+						</div>
+						<div class="reports">
+							<p class="title">災害時救援ボランティアコーディネーター養成講座</p>
+							<ul>
+								<li><a href="#" target="_blank">要請講座</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		
 		</div>
 	</div>
 </div>

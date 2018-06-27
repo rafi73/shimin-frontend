@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/*==================================================
+ボランティア・イベント情報
+================================================== */
+
+/* h2 */
+#pagetitle.topics .container .h2{
+	background-image: url(../images/bg_pagetitle_topics.png) ;
+}
+
+.maincontents.topics .container{
+	display: table ;
+}
+.sidenav{
+	display: table-cell ;
+	width: 260px ;
+	height: 360px ;
+	vertical-align: top ;
+}
+.topics_list{
+	display: table-cell ;
+	padding-left: 40px ;
+	vertical-align: top ;
+}
+@media (max-width: 991px){
+	.maincontents.topics .container,
+	.sidenav,
+	.topics_list{
+		display: block ;
+		width: 100% ;
+	}
+	.sidenav{
+		height: auto ;
+	}
+	.topics_list{
+		padding-left: 0 ;
+	}
+}
+
+/* sidenav============================================ */
+
+.sort_panel .body dl.input-group dd label.volunteer::before{
+	content: "\f004";
+    color: #ed5e55;
+}
+.sort_panel .body dl.input-group dd label.event::before{
+	content: "\f425";
+    color: #f7b515;
+}
+.sort_panel .body dl.input-group dd label.member::before{
+	content: "\f015";
+    color: #59bb2f;
+}
+
+@media (max-width: 991px){
+	.sort_panel .body dl.input-group{
+		width: 33% ;
+		float: left ;
+		padding-right: 10px ;
+		border-bottom-width: 0 ;
+		margin-bottom: 0 ;
+	}
+}
+@media (max-width: 767px){
+	.sort_panel .body dl.input-group{
+		width: 100% ;
+		float: none
+	}
+}
+
+/* topic list============================================== */
+
+.topics_body{
+	margin-bottom: 30px ;
+	width: 100% ;
+}
+.topics_body .item a{
+	padding: 18px 15px ;
+	display: block ;
+	border: #e6e6e6 1px solid ;
+	margin-top: -1px ;
+	position: relative ;
+	z-index: 1 ;
+	background-color: #fff ;
+}
+.topics_body .item a:hover{
+	border-color: #1b89e7 ;
+	z-index: 2 ;
+	box-shadow: 4px 6px 0px rgba(0, 0, 0, 0.1) ; 
+}
+.topics_body .item a .sinfo{
+	display: table ;
+	width: 100% ;
+	font-size: 0.95em ;
+	margin-bottom: 7px ;
+}
+.topics_body .item a .sinfo .type,
+.topics_body .item a .sinfo .day,
+.topics_body .item a .sinfo .cate{
+	display: table-cell ;
+}
+.topics_body .item a .sinfo .type{
+	width: 85px ;
+}
+.topics_body .item a .sinfo .type span{
+	width: 100% ;
+	font-size: 1.1rem ;
+	text-align: center ;
+	display: block ;
+	height: 17px ;
+	border-radius: 12px ;
+	border-style: solid ;
+	border-width: 1px ;
+	padding-top: 1px ;
+	margin-top: -3px ;
+}
+/* ボランティア */
+.type span.volunteer{
+	color: #e56092 ;
+	border-color: #e56092 ;
+	background-color: #ffe4ee ;
+}
+/* イベント */
+.type span.event{
+	color: #ec9b00 ;
+	background-color: #fff9cb ;
+	border-color: #ec9b00 ;
+}
+/* 会員情報 */
+.type span.member{
+	color: #59bb2f ;
+	background-color: #dfffd2 ;
+	border-color: #59bb2f ;
+}
+.topics_body .item a .sinfo .day{
+	width: 350px ;
+	padding-left: 10px ;
+	font-weight: normal ;
+	color: #888 ;
+}
+.topics_body .item a .sinfo .cate{
+	padding-left: 10px ;
+	font-weight: normal ;
+	color: #888 ;
+}
+.topics_body .item a .sinfo .cate span{
+	padding-left: 20px ;
+}
+.topics_body .item a .sinfo .cate span::before{
+	font-size: 1.2em ;
+}
+.topics_body .item a .title{
+	font-size: 1.08em ;
+	transition: all 0.3s ;
+	line-height: 1.3em ;
+	/* padding-left: 25px ;
+	position: relative ; */
+}
+/* .topics_body .item a .title::before{
+	position: absolute ;
+	content: "\f138" ;
+	font-family: 'Font Awesome 5 Free' ;
+	left: 5px ;
+	font-size: 0.9em ;
+} */
+.topics_body .item a .title span.new{
+	background-color: #f7c411 ;
+	color: #fff ;
+	margin-right: 5px ;
+	padding: 2px ;
+	font-size: 1.2rem ;
+	display: inline-block ;
+	line-height: 1em ;
+}
+.topics_body .item a:hover .title{
+	color: #1b89e7 ;
+	text-decoration: none ;
+}
+@media (max-width: 767px){
+	.topics_body .item a {
+		padding: 15px 10px ;
+	}
+	.topics_body .item a .sinfo,
+	.topics_body .item a .sinfo .type,
+	.topics_body .item a .sinfo .day,
+	.topics_body .item a .sinfo .cate{
+		display: block ;
+	}
+	.topics_body .item a .sinfo{
+		margin-bottom: 10px ;
+	}
+	.topics_body .item a .sinfo .type,
+	.topics_body .item a .sinfo .day,
+	.topics_body .item a .sinfo .cate{
+		padding-left: 0 ;
+		margin-bottom: 5px ;
+	}
+	.topics_body .item a .sinfo .day{
+		width: 100% ;
+	}
+}
+
+/*==================================================
+詳細
+================================================== */
+
+.detail_haed .type{
+	width: 85px ;
+}
+.detail_haed .type span{
+	width: 100% ;
+	font-size: 1.1rem ;
+	text-align: center ;
+	display: block ;
+	height: 17px ;
+	border-radius: 12px ;
+	border-style: solid ;
+	border-width: 1px ;
+	padding-top: 1px ;
+	margin-top: -3px ;
+}
+.detail_body .topinformation{
+	width: 100% ;
+	display: -ms-flex;
+	display: flex ;
+	justify-content: space-between;
+}
+.detail_body .topinformation dl{
+	flex: 1 ;
+	display: -ms-flex;
+	display: flex ;
+}
+.detail_body .topinformation dl dt,
+.detail_body .topinformation dl dd{
+
+}
+@media (max-width: 767px){
+	.detail_body .topinformation{
+		display: block ;
+		margin-bottom: 5px ;
+	}	
+}

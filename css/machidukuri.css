@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/*==================================================
+
+ 地域まちづくり情報
+
+================================================== */
+
+/* h2 */
+#pagetitle.machi .container .h2{
+	background-image: url(../images/bg_pagetitle_machi.png) ;
+}
+.machidukuri-col{
+	max-width: 1100px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	width: 100% ;
+	display: flex ;
+	flex-wrap: wrap ;
+}
+.col-left{
+	width: 72% ;
+}
+.col-right{
+	width: 28% ;
+}
+
+@media (max-width: 991px){
+	.machidukuri-col,
+	.col-left,
+	.col-right{
+		display: block ;
+		width: 100% ;
+	}
+}
+
+/* texterea */
+
+.texterea{
+	max-width: 700px ;
+	padding: 15px 20px ;
+	border-radius: 15px ;
+	background: url(../images/bg_brown.png) repeat ;
+	margin-bottom: 50px ;
+	margin-top: 40px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+.texterea p.img{
+	width: 100% ;
+	margin-top: -70px ;
+	margin-bottom: 10px ;
+	text-align: center ;
+}
+.texterea p.text{
+	font-size: 1.05em ;
+	line-height: 1.6em ;
+	color: #a38853 ;
+}
+
+/* svg map */
+
+.maperea{
+	width: 100% ;
+	text-align: center ;
+	position: relative ;
+}
+.discript_text{
+	position: absolute ;
+	display: inline-block ;
+	top: 60px ;
+	left: 220px ;
+	text-align: center ;
+	line-height: 1.3em ;
+	color: #a38853 ;
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.13) ;
+}
+.discript_text::before{
+	content: "\f0a6" ;
+	display: block ;
+	width: 100% ;
+	font-size: 1.4em ;
+	margin-bottom: 5px ;
+	font-weight: normal ;
+	font-family: 'Font Awesome 5 Free' ;
+}
+g#colormap path{
+	opacity: 0.25;
+	transition: all 0.3s ;
+}
+g#colormap path:hover{
+	opacity: 1 ;
+	cursor: pointer ;
+	-webkit-filter: drop-shadow( 4px 4px 0 rgba(0, 0, 0, 0.08)) ;
+	filter: drop-shadow( 4px 4px 0 rgba(0, 0, 0, 0.08)) ;
+}
+
+@media (max-width: 767px){
+	svg path,
+	.discript_text{
+		display: none ;
+	}
+	svg{
+		width: 100% ;
+		
+	}
+}
+
+/* right============================================ */
+
+.machi_list{
+	width: 100% ;
+	margin-bottom: 30px ;
+}
+.machi_list dl{
+	width: 100% ;
+	margin-bottom: 0 ;
+	padding: 13px 0 5px 0 ;
+	transition: all 0.3s ;
+	position: relative ;
+}
+.machi_list dl:first-child,
+.machi_list dl:first-child::before{
+	border-radius: 10px 10px 0 0 ;
+}
+.machi_list dl:last-child,
+.machi_list dl:last-child::before{
+	border-radius: 0 0 10px 10px ;
+}
+.machi_list dl:nth-child(odd){
+	background-color: rgba(27, 137, 231, 0.14) ;
+}
+.machi_list dl:nth-child(even){
+	background-color: rgba(27, 137, 231, 0.09) ;
+}
+.machi_list dl:nth-child(odd):hover,
+.machi_list dl:nth-child(even):hover{
+	background-color: #fff ;
+	cursor:pointer;
+	box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.08) ;
+}
+
+.machi_list dl dt{
+	margin-bottom: 5px ;
+	text-decoration: underline ;
+	padding-left: 15px ;
+	color: #1b89e7 ;
+	letter-spacing: 0.2em ;
+	font-size: 1.05em ;
+}
+.machi_list dl:hover dt{
+	text-decoration: none ;
+}
+.machi_list dl dt span{
+	color: #fff ;
+	position: relative ;
+	margin-right: 8px ;
+	text-align: center ;
+	font-size: 0.9em ;
+	width: 20px ;
+	display: inline-block ;
+	z-index: 20 ;
+	letter-spacing: 0em ;
+}
+.machi_list dl dt span::before{
+	position: absolute ;
+	z-index: -1 ;
+	color: #1b89e7 ;
+	left: 50% ;
+	top: 3px ;
+	font-family: 'Font Awesome 5 Free';
+	transform: translateX(-50%) ;
+	font-size: 2.2em ;
+	content: "\f041" ;
+}
+.machi_list dl dd{
+	font-size: 0.85em ;
+	padding-left: 45px ;
+	margin-bottom: 5px ;
+}

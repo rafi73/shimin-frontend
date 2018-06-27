@@ -218,7 +218,7 @@ ul,li{
 	display: block ;
 	width: 100% ;
 	padding: 0 ;
-	height: 115px ;
+	height: 105px ;
 }
 #global_nav .navbar{
 	width: 100% ;
@@ -231,13 +231,14 @@ nav.global_nav ul{
 	width: 100% ;
 	max-width: 950px ;
 	margin: 0 auto ;
-	padding: 20px 0 30px 0 ;
+	padding: 20px 0 ;
 }
 nav.global_nav li{
 	float: left ;
 	width: 20% ;
 	border-right: #e7d8bc 2px dotted ;
 	position: relative ;
+	transition: all 0.3s ;
 }
 nav.global_nav li:last-child{
 	border: 0 ;
@@ -268,6 +269,7 @@ nav.global_nav li a.toggle::after{
 	font-family: 'Font Awesome 5 Free' ;
 	content: "\f13a";
 	color: #1b89e7 ;
+	font-size: 0.85em ;
 }
 nav.global_nav li a span.t{
 	font-size: 1.6rem ;
@@ -327,7 +329,7 @@ nav.global_nav li a:hover span.t{
 }
 nav.global_nav li ul.submenu{
     display: none ;
-	background-color: #1b89e7 ;
+	background-color: #46a8f0 ;
 	color: #fff ;
 	width: auto ;
 	min-width: 150px ;
@@ -337,7 +339,7 @@ nav.global_nav li ul.submenu{
 	top: 60px ;
 	transform: translateX(-50%) ;
 	border-radius: 5px ;
-	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15) ;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15) ;
 	padding: 0 !important ;
 }
 nav.global_nav li ul.submenu.open{
@@ -349,12 +351,12 @@ nav.global_nav li ul.submenu li{
 	width: 100% ;
 	margin-right: 0 ;
 	border-right: 0 ;
-	border-bottom: rgba(0, 88, 164, 0.3) 1px solid ;
+	border-bottom: rgba(0, 88, 164, 0.2) 1px solid ;
 }
 nav.global_nav li ul.submenu li a{
     display: block ;
     font-size: 1.4rem ;
-	padding: 15px 15px 12px 15px ;
+	padding: 18px 10px 15px 10px ;
 	color: #fff ;
 	white-space: nowrap ;
 	line-height: 1.4em ;
@@ -363,7 +365,7 @@ nav.global_nav li ul.submenu li a::before{
 	content: none ;
 }
 nav.global_nav li ul.submenu li a:hover {
-	background-color: rgba(0, 88, 164, 0.3) ;
+	background-color: rgba(0, 88, 164, 0.25) ;
 }
 
 /* scrol============== */
@@ -373,34 +375,38 @@ nav.global_nav li ul.submenu li a:hover {
 	margin-top: 0 ;
 	position: fixed ;
 	top: 0 ;
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3) ;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2) ;
 }
 #global_nav.scrol nav.global_nav ul{
-	padding: 20px 0 10px 0 ;
+	padding: 15px 0 5px 0 ;
+}
+#global_nav.scrol nav.global_nav > ul > li{
+	border: 0 ;
 }
 #global_nav.scrol nav.global_nav li a::before{
-	width: 60px ;
-	height: 60px ;
-	background-size: 80% ;
-	top: -5px ;
+	width: 55px ;
+	height: 55px ;
+	background-size: 75% ;
+	top: -10px ;
 }
 #global_nav.scrol nav.global_nav li a span.t{
 	font-size: 1.5rem ;
 }
 #global_nav.scrol nav.global_nav li a span.i{
-	height: 25px ;
+	height: 22px ;
 }
 #global_nav.scrol nav.global_nav li a span.i::before{
-	height: 35px ;
-	background-size: 70% ;
+	height: 30px ;
+	background-size: 65% ;
+	margin-top: -10px ;
 }
 #global_nav.scrol nav.global_nav li ul.submenu{
-	top: 50px ;
+	top: 42px ;
 	padding-top: 0 ;
 }
 #global_nav.scrol nav.global_nav li.open a span.i::before,
 #global_nav.scrol nav.global_nav li a:hover span.i::before{
-	margin-top: -18px ;
+	margin-top: -13px ;
 }
 
 @media (max-width: 991px){
@@ -413,9 +419,11 @@ nav.global_nav li ul.submenu li a:hover {
 		width: 100% ;
 		margin-top: 0 ;
 	}
-	#global_nav .navbar{
+	#global_nav .navbar,
+	#global_nav.scrol .navbar{
 		width: 100% ;
 		padding: 0 ;
+		position: relative ;
 	}
 	.navbar-toggler{
 		background: url(../images/bg_brown.png) repeat center ;
@@ -455,16 +463,19 @@ nav.global_nav li ul.submenu li a:hover {
 	.global_nav{
 		background: url(../images/bg_blue.png) repeat center ;
 	}
-	nav.global_nav ul{
+	nav.global_nav ul,
+	#global_nav.scrol nav.global_nav ul{
 		padding: 10px 15px ;
 	}
-	nav.global_nav li{
+	nav.global_nav li,
+	#global_nav.scrol nav.global_nav li{
 		width: 100% ;
 		float: none ;
 		border-right: 0 ;
 		border-bottom: rgba(0, 88, 164, 0.3) 1px solid ;
 	}
-	nav.global_nav li a{
+	nav.global_nav li a,
+	#global_nav.scrol nav.global_nav li a{
 		padding: 18px 15px ;
 		text-align: left ;
 	}
@@ -476,7 +487,10 @@ nav.global_nav li ul.submenu li a:hover {
 	}
 	nav.global_nav li a span.t,
 	nav.global_nav li.open a span.t,
-	nav.global_nav li a:hover span.t{
+	nav.global_nav li a:hover span.t,
+	#global_nav.scrol nav.global_nav li a span.t,
+	#global_nav.scrol nav.global_nav li.open a span.t,
+	#global_nav.scrol nav.global_nav li a:hover span.t{
 		font-size: 1.3rem ;
 		color: #fff ;
 	}
@@ -812,7 +826,7 @@ address{
 
 #pagetitle{
 	width: 100% ;
-	background-image: url(../images/bg_cyan.png) ;
+	background-image: url(../images/bg_blue.png) ;
 	background-repeat: repeat ;
 }
 #pagetitle .container .h2{
@@ -850,6 +864,7 @@ address{
 }
 ol.topicpath{
 	padding: 13px 0 ;
+	margin-bottom: 0 ;
 }
 ol.topicpath::after{
 	content: ".";   
@@ -1052,6 +1067,200 @@ nav.pager ul li.next a::after{
 	}
 }
 
+/* fixed sidenav=============================================== */
+
+/* sidenav============================================ */
+
+#sidenav_affix{
+	width: 260px ;
+	margin-top: -80px ;
+	padding-top: 80px ;
+	padding-bottom: 60px ;
+	transition: all 0.3s ;
+}
+.sort_panel{
+	width: 100% ;
+	border-radius: 10px ;
+	margin-bottom: 15px ;
+	overflow: hidden ;
+	background: url(../images/bg_brown.png) repeat center ;
+}
+.sort_panel .head{
+	width: 100% ;
+	margin-bottom: 5px ;
+	background-color: #1b89e7 ;
+	padding: 12px ;
+	position: relative ;
+}
+.sort_panel .head::after{
+	position: absolute ;
+	content: " ";
+	top: 95%;
+	left: 50%;
+	margin-left: -10px;
+	border: 10px solid transparent;
+	border-top: 10px solid #1b89e7 ;
+}
+.sort_panel .head p{
+	color: #fff ;
+	text-align: center ;
+	margin-bottom: 0 ;
+}
+.sort_panel .head p::before{
+	content: "\f002" ;
+	font-family: 'Font Awesome 5 Free' ;
+	margin-right: 5px ;
+}
+
+.sort_panel .body{
+	padding: 15px ;
+}
+.sort_panel .body dl.input-group{
+	width: 100% ;
+	margin-bottom: 15px ;
+	border-bottom: #e7d8bc 1px solid ;
+}
+.sort_panel .body dl.input-group dt{
+	width: 100% ;
+	margin-bottom: 10px ;
+	color: #1b89e7 ;
+}
+.sort_panel .body dl.input-group dd{
+	margin-bottom: 10px ;
+	width: 100% ;
+}
+.sort_panel .body dl.input-group dd label{
+	width: 100% ;
+	margin-bottom: 10px ;
+}
+.sort_panel .body dl.input-group dd input[type="text"],
+.sort_panel .body dl.input-group dd select{
+	padding: 8px ;
+	width: 100% ;
+	border: #e7d8bc 1px solid ;
+	border-radius: 5px ;
+	font-weight: bold ;
+	color: #1b89e7 ;
+}
+.sort_panel .body dl.input-group dd select option{
+	font-size: 0.9em ;
+	font-weight: bold ;
+	color: #5f4533 ;
+}
+.sort_panel .body .btn_search{
+	text-align: center ;
+	display: block ;
+	clear: both ;
+}
+.sort_panel .body .btn_search button{
+	background-color: #1b89e7 ;
+	color: #fff ;
+	box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.07) ;
+	border: 0 ;
+	padding: 10px ;
+	border-radius: 3px ;
+	width: 100px ;
+	font-weight: bold ;
+}
+.sort_panel .body dl.input-group dd label::before{
+	font-family: 'Font Awesome 5 Free' , 'Font Awesome 5 Brands' ;
+	margin-right: 5px ;
+}
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"]{
+    display: none ;
+}
+.checkbox input[type="checkbox"] + .icon,
+.checkbox input[type="radio"] + .icon{
+    position: relative;
+    vertical-align: middle ;
+    display: block ;
+    height: 16px ;
+    width: 16px ;
+    float: left ;
+    margin-right: 5px ;
+	line-height: 1 ;
+}
+.checkbox input[type="checkbox"] + .icon:before,
+.checkbox input[type="radio"] + .icon:before{
+    content: " ";
+    background-color: #fff ;
+	box-shadow: 0px 0px 1px #906618 ;
+    padding: 2px ;
+    border-radius: 50% ;
+    height: 15px ;
+    width: 15px ;
+    margin-right: 5px ;
+    position: absolute ;
+    top: 0 ;
+	left: 0 ;
+}
+.checkbox input[type="checkbox"]:checked + .icon:before,
+.checkbox input[type="radio"]:checked + .icon:before{
+    content: " ";
+    background-color: #1b89e7 ;
+	border-radius: 50% ;
+	border: 3px solid #fff ;
+}
+
+/* mini nav======================== */
+
+.mininav{
+	width: 100% ;
+}
+.mininav ul li{
+	margin-bottom: 10px ;
+	text-align: center ;
+}
+.mininav ul li a{
+	color: #1b89e7 ;
+	text-decoration: underline ;
+	position: relative ;
+	font-size: 1.3rem ;
+}
+.mininav ul li a:hover{
+	text-decoration: none ;
+}
+.mininav ul li a::before{
+	position: absolute ;
+	font-family: 'Font Awesome 5 Free' ;
+    font-size: 1.5rem ;
+	content: "\f059" ;
+	left: -20px ;
+}
+@media (max-width: 991px){
+	#sidenav_affix{
+		width: 100% ;
+		position: static !important ;
+		margin-bottom: 20px ;
+		padding-top: 0 ;
+		margin-top: 0 ;
+		padding-bottom: 0 ;
+	}
+	.sort_panel .body dl.input-group{
+		width: 33% ;
+		float: left ;
+		padding-right: 10px ;
+		border-bottom-width: 0 ;
+		margin-bottom: 0 ;
+	}
+	.mininav{
+		display: none ;
+	}
+}
+@media (max-width: 767px){
+	.sort_panel .body dl.input-group{
+		width: 100% ;
+		padding-right: 0 ;
+		border-bottom-width: 1px ;
+		margin-bottom: 10px ;
+	}
+	.sort_panel .body dl.input-group dd label{
+		width: 50% ;
+		float: left ;
+	}
+}
+
 /* btnpageback========================================= */
 
 .btn_pageback{
@@ -1073,4 +1282,156 @@ nav.pager ul li.next a::after{
 }
 .btn_pageback a:hover{
 	text-decoration: none ;
+}
+
+/* 活動分野アイコン========================================= */
+
+span.type01,
+span.type02,
+span.type03,
+span.type04,
+span.type05,
+span.type06,
+span.type07,
+span.type08,
+span.type09,
+span.type10,
+span.type11,
+span.type12,
+span.type13,
+span.type14,
+span.type15,
+span.type16,
+span.type17,
+span.type18,
+span.type19,
+span.type20,
+span.type21,
+span.type22,
+span.type23{
+	position: relative ;
+	padding-left: 18px ;
+}
+
+span.type01::before,
+span.type02::before,
+span.type03::before,
+span.type04::before,
+span.type05::before,
+span.type06::before,
+span.type07::before,
+span.type08::before,
+span.type09::before,
+span.type10::before,
+span.type11::before,
+span.type12::before,
+span.type13::before,
+span.type14::before,
+span.type15::before,
+span.type16::before,
+span.type17::before,
+span.type18::before,
+span.type19::before,
+span.type20::before,
+span.type21::before,
+span.type22::before,
+span.type23::before{
+	position: absolute ;
+	font-family: 'icomoon' ;
+	font-weight: normal ;
+	left: 0 ;
+	top: 0 ;
+	font-size: 1.3em ;
+}
+span.type01::before{
+	content: "\e900" ;
+	color: #f94365 ;
+}
+span.type02::before{
+	content: "\e901" ;
+	color: #cc63db ;
+}
+span.type03::before{
+	content: "\e902" ;
+	color: #18c49a ;
+}
+span.type04::before{
+	content: "\e903" ;
+	color: #ff5fdd ;
+}
+span.type05::before{
+	content: "\e904" ;
+	color: #6529db ;
+}
+span.type06::before{
+	content: "\e905" ;
+	color: #00ba2c ;
+}
+span.type07::before{
+	content: "\e906" ;
+	color: #87e014 ;
+}
+span.type08::before{
+	content: "\e907" ;
+	color: #e5912c ;
+}
+span.type09::before{
+	content: "\e908" ;
+	color: #eb9600 ;
+}
+span.type10::before{
+	content: "\e909" ;
+	color: #1cdbe4 ;
+}
+span.type11::before{
+	content: "\e90a" ;
+	color: #f74c10 ;
+}
+span.type12::before{
+	content: "\e90b" ;
+	color: #ef21d2 ;
+}
+span.type13::before{
+	content: "\e90c" ;
+	color: #d6187c ;
+}
+span.type14::before{
+	content: "\e90d" ;
+	color: #15a2ce ;
+}
+span.type15::before{
+	content: "\e90e" ;
+	color: #20ce55 ;
+}
+span.type16::before{
+	content: "\e90f" ;
+	color: #ffda10 ;
+}
+span.type17::before{
+	content: "\e910" ;
+	color: #1377d1 ;
+}
+span.type18::before{
+	content: "\e911" ;
+	color: #b138ce ;
+}
+span.type19::before{
+	content: "\e912" ;
+	color: #e89a10 ;
+}
+span.type20::before{
+	content: "\e913" ;
+	color: #23c46f ;
+}
+span.type21::before{
+	content: "\e914" ;
+	color: #7423c9 ;
+}
+span.type22::before{
+	content: "\e915" ;
+	color: #17c6a8 ;
+}
+span.type23::before{
+	content: "\e916" ;
+	color: #dfe808 ;
 }
