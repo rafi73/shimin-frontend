@@ -270,6 +270,7 @@ nav.global_nav li a.toggle::after{
 	content: "\f13a";
 	color: #1b89e7 ;
 	font-size: 0.85em ;
+	z-index: 100 ;
 }
 nav.global_nav li a span.t{
 	font-size: 1.6rem ;
@@ -858,7 +859,7 @@ address{
 /* topicpath===================================================== */
 
 #topicpath{
-	background-image: url(../images/bg_brown.png) ;
+	background-image: url(../images/bg_brown2.png) ;
 	background-repeat: repeat ;
 	width: 100% ;
 }
@@ -915,6 +916,9 @@ ol.topicpath li:first-child a::before{
 	padding-top: 40px ;
 	padding-bottom: 50px ;
 }
+.maincontents .container.tight{
+	max-width: 1150px ;
+}
 @media (max-width: 767px){
 	.maincontents .container{
 		padding-top: 20px ;
@@ -922,6 +926,50 @@ ol.topicpath li:first-child a::before{
 }
 img.img_responsive{
 	max-width: 100% ;
+}
+
+/* h4===================================================== */
+
+.h4.subp{
+	margin-bottom: 20px ;
+}
+.h4.subp h4{
+	font-size: 1.65em ;
+	font-weight: bold ;
+	border-bottom: rgba(95, 69, 51, 0.4) dotted 2px ;
+	display: inline-block ;
+	padding: 5px 0 ;
+}
+@media (max-width: 767px){
+	.h4.subp{
+		text-align: center ;
+	}
+	.h4.subp h4{
+		font-size: 1.4em ;
+	}
+}
+
+/* btn blue========================================================= */
+
+.btn_blue.subp{
+	text-align: center ;
+	width: 100% ;
+}
+.btn_blue.subp a{
+	background: url(../images/bg_blue.png) repeat center ;
+	border-radius: 25px ;
+	box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.07) ;
+	color: #fff ;
+	padding: 15px 30px ;
+	display: inline-block ;
+	font-size: 1.4rem ;
+	line-height: 1em ;
+	position: relative ;
+}
+.btn_blue.subp a::before{
+	transform: translateY(-50%) ;
+    font-family: 'Font Awesome 5 Free';
+	margin-right: 5px ;
 }
 
 /* pagenation===================================================== */

@@ -235,6 +235,9 @@
 .detail_body .topinformation dl dd{
 
 }
+.detail_body .topinformation dl dd span{
+	padding-left: 25px ;
+}
 @media (max-width: 767px){
 	.detail_body .topinformation{
 		display: block ;
