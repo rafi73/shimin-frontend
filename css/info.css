@@ -85,6 +85,7 @@
 /* sec02 */
 .maininfo.sec02 .history p{
 	margin-bottom: 20px ;
+	line-height: 1.4em ;
 }
 
 /* sec03 */
@@ -216,11 +217,13 @@
 .maininfo.sec04 .right .address a{
 	text-decoration: underline ;
 	color: #1b89e7 ;
+	margin-left: 10px ;
 }
-.maininfo.sec04 .right .address span.title{
-	width: 75px ;
-	display: inline-block ;
+.maininfo.sec04 .right .address a::before{
+	font-family: 'Font Awesome 5 Free' ;
+	content: "\f3c5" ;
 }
+
 .maininfo.sec04 .right .address span.red{
 	color: #ea2028 ;
 }
@@ -270,6 +273,10 @@
 	}
 }
 @media (max-width: 767px){
+	/* sec01 */
+	.maininfo.sec02 .history p span{
+		display: block ;
+	}
 	/* sec03 */
 	.maininfo.sec03 .col_01,
 	.maininfo.sec03 .col_02{
@@ -459,6 +466,13 @@ dl.url dt::before{
 .format_body .group .list dl dt a{
 	text-decoration: underline ;
 }
+.format_body .group .list dl dt a::before{
+	font-family: 'Font Awesome 5 Free' ;
+	content: "\f15c" ;
+	margin-right: 3px ;
+	color: #1b89e7 ;
+}
+/*
 .format_body .group .list dl dt a span{
 	display: inline-block ;
 	position: relative ;
@@ -470,18 +484,25 @@ dl.url dt::before{
 	top: -2px ;
 	left: 0 ;
 }
+*/
 /* pdf */
+/*
 .format_body .group .list dl dt a span.pdf::before{
 	content: url(../images/ico_pdf.png) ;
 }
+*/
 /* word */
+/*
 .format_body .group .list dl dt a span.word::before{
 	content: url(../images/ico_word.png) ;
 }
+*/
 /* excel */
+/*
 .format_body .group .list dl dt a span.xls::before{
 	content: url(../images/ico_xls.png) ;
 }
+*/
 .format_body .group .list dl dt a:hover{
 	text-decoration: none ;
 }

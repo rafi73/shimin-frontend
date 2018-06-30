@@ -579,7 +579,7 @@ ul.banner li a::before{
 	content: " " ;
 }
 ul.banner li a:hover::before{
-	border-color: rgba(27, 137, 231, 0.8) ;
+	border-color: #1b89e7 ;
 }
 @media (max-width: 767px){
 	#banner .container{
@@ -911,6 +911,7 @@ ol.topicpath li:first-child a::before{
 
 .maincontents{
 	background: url(../images/bg_wave_brown.png) bottom repeat-x ;
+	min-height: 500px ;
 }
 .maincontents .container{
 	padding-top: 40px ;
@@ -958,7 +959,7 @@ img.img_responsive{
 .btn_blue.subp a{
 	background: url(../images/bg_blue.png) repeat center ;
 	border-radius: 25px ;
-	box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.07) ;
+	box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.13) ;
 	color: #fff ;
 	padding: 15px 30px ;
 	display: inline-block ;
@@ -970,6 +971,10 @@ img.img_responsive{
 	transform: translateY(-50%) ;
     font-family: 'Font Awesome 5 Free';
 	margin-right: 5px ;
+}
+.btn_blue.subp a:hover{
+	opacity: 0.8 ;
+	color: #fff ;
 }
 
 /* pagenation===================================================== */
@@ -1041,10 +1046,12 @@ nav.pager ul li.next a::after{
 }
 .detail_body .information dl dt{
 	width: 180px ;
+	min-width: 180px ;
+	max-width: 180px ;
 }
 .detail_body .information dl dd{
-	font-family: "游ゴシック Medium" , "Yu Gothic Medium" , "游ゴシック体", YuGothic ;
-	font-weight: normal ;
+	/* font-family: "游ゴシック Medium" , "Yu Gothic Medium" , "游ゴシック体", YuGothic ;
+	font-weight: normal ; */
 	line-height: 1.4em ;
 	margin-bottom: 0 ;
 }
@@ -1130,7 +1137,6 @@ nav.pager ul li.next a::after{
 	width: 100% ;
 	border-radius: 10px ;
 	margin-bottom: 15px ;
-	overflow: hidden ;
 	background: url(../images/bg_brown.png) repeat center ;
 }
 .sort_panel .head{
@@ -1138,6 +1144,7 @@ nav.pager ul li.next a::after{
 	margin-bottom: 5px ;
 	background-color: #1b89e7 ;
 	padding: 12px ;
+	border-radius: 5px 5px 0 0 ;
 	position: relative ;
 }
 .sort_panel .head::after{

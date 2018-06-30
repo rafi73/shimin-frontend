@@ -74,6 +74,21 @@
 .topics_body{
 	margin-bottom: 30px ;
 	width: 100% ;
+	min-height: 80px ;
+	position: relative ;
+}
+.topics_body::before{
+	position: absolute ;
+	top: 0 ;
+	padding-top: 30px ;
+	color: #ccc ;
+	content: "現在掲載可能な情報はありません。" ;
+	background-color: #f3f3f3 ;
+	border-radius: 10px ;
+	width: 100% ;
+	height: 80px ;
+	text-align: center ;
+	z-index: -1 ;
 }
 .topics_body .item a{
 	padding: 18px 15px ;
@@ -231,12 +246,14 @@
 	display: -ms-flex;
 	display: flex ;
 }
-.detail_body .topinformation dl dt,
-.detail_body .topinformation dl dd{
+.detail_body .topinformation dl dt{
 
 }
 .detail_body .topinformation dl dd span{
-	padding-left: 25px ;
+	padding-left: 22px ;
+}
+.detail_body .topinformation dl dd span::before{
+	top: 3px ;
 }
 @media (max-width: 767px){
 	.detail_body .topinformation{

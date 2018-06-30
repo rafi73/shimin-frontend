@@ -18,17 +18,17 @@
 	display: flex ;
 	flex-wrap: wrap ;
 }
-.col-left{
+.machidukuri-col .col-left{
 	width: 72% ;
 }
-.col-right{
+.machidukuri-col .col-right{
 	width: 28% ;
 }
 
 @media (max-width: 991px){
 	.machidukuri-col,
-	.col-left,
-	.col-right{
+	.machidukuri-col .col-left,
+	.machidukuri-col .col-right{
 		display: block ;
 		width: 100% ;
 	}
@@ -36,8 +36,8 @@
 
 /* texterea */
 
-.texterea{
-	max-width: 700px ;
+.machidukuri-col .texterea{
+	max-width: 800px ;
 	padding: 15px 20px ;
 	border-radius: 15px ;
 	background: url(../images/bg_brown.png) repeat ;
@@ -46,26 +46,25 @@
 	margin-left: auto ;
 	margin-right: auto ;
 }
-.texterea p.img{
+.machidukuri-col .texterea p.img{
 	width: 100% ;
 	margin-top: -70px ;
 	margin-bottom: 10px ;
 	text-align: center ;
 }
-.texterea p.text{
+.machidukuri-col .texterea p.text{
 	font-size: 1.05em ;
 	line-height: 1.6em ;
-	color: #a38853 ;
 }
 
 /* svg map */
 
-.maperea{
+.machidukuri-col .maperea{
 	width: 100% ;
 	text-align: center ;
 	position: relative ;
 }
-.discript_text{
+.machidukuri-col .discript_text{
 	position: absolute ;
 	display: inline-block ;
 	top: 60px ;
@@ -75,7 +74,7 @@
 	color: #a38853 ;
 	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.13) ;
 }
-.discript_text::before{
+.machidukuri-col .discript_text::before{
 	content: "\f0a6" ;
 	display: block ;
 	width: 100% ;
@@ -85,7 +84,7 @@
 	font-family: 'Font Awesome 5 Free' ;
 }
 g#colormap path{
-	opacity: 0.25;
+	opacity: 0.3;
 	transition: all 0.3s ;
 }
 g#colormap path:hover{
@@ -94,15 +93,22 @@ g#colormap path:hover{
 	-webkit-filter: drop-shadow( 4px 4px 0 rgba(0, 0, 0, 0.08)) ;
 	filter: drop-shadow( 4px 4px 0 rgba(0, 0, 0, 0.08)) ;
 }
+.sp-img{
+	display: none ;
+}
 
 @media (max-width: 767px){
-	svg path,
-	.discript_text{
+	.machidukuri-col svg,
+	.machidukuri-col .discript_text{
 		display: none ;
 	}
-	svg{
-		width: 100% ;
-		
+	.machidukuri-col .texterea p.img{
+		margin-top: -45px ;
+	}
+	.sp-img{
+		display: block ;
+		text-align: center ;
+		margin-bottom: 20px ;
 	}
 }
 
@@ -111,6 +117,8 @@ g#colormap path:hover{
 .machi_list{
 	width: 100% ;
 	margin-bottom: 30px ;
+	padding-left: 15px ;
+	border-top: rgba(163, 120, 89, 0.3) dotted 1px ;
 }
 .machi_list dl{
 	width: 100% ;
@@ -118,28 +126,12 @@ g#colormap path:hover{
 	padding: 13px 0 5px 0 ;
 	transition: all 0.3s ;
 	position: relative ;
+	border-bottom: rgba(163, 120, 89, 0.3) dotted 1px ;
 }
-.machi_list dl:first-child,
-.machi_list dl:first-child::before{
-	border-radius: 10px 10px 0 0 ;
+.machi_list dl:hover{
+	cursor: pointer ;
+	background-color: rgba(214, 187, 112, 0.15) ;
 }
-.machi_list dl:last-child,
-.machi_list dl:last-child::before{
-	border-radius: 0 0 10px 10px ;
-}
-.machi_list dl:nth-child(odd){
-	background-color: rgba(27, 137, 231, 0.14) ;
-}
-.machi_list dl:nth-child(even){
-	background-color: rgba(27, 137, 231, 0.09) ;
-}
-.machi_list dl:nth-child(odd):hover,
-.machi_list dl:nth-child(even):hover{
-	background-color: #fff ;
-	cursor:pointer;
-	box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.08) ;
-}
-
 .machi_list dl dt{
 	margin-bottom: 5px ;
 	text-decoration: underline ;
@@ -172,9 +164,174 @@ g#colormap path:hover{
 	transform: translateX(-50%) ;
 	font-size: 2.2em ;
 	content: "\f041" ;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.13) ;
 }
 .machi_list dl dd{
 	font-size: 0.85em ;
 	padding-left: 45px ;
 	margin-bottom: 5px ;
+}
+@media (max-width: 767px){
+	.machi_list {
+		padding-left: 0 ;
+	}
+}
+
+/* modal============================== */
+
+.modal-backdrop.show{
+	opacity: 0.2 ;
+}
+.modal-dialog{
+	margin-top: 80px ;
+}
+.modal .modal-content{
+	border-radius: 15px ;
+	background: url(../images/bg_brown.png) repeat center ;
+	border: 0 ;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) ;
+	margin-bottom: 15px ;
+}
+.modal .header{
+	background: url(../images/bg_blue.png) repeat center ;
+	border-radius: 15px 15px 0 0 ;
+}
+.modal .header div.h5{
+	text-align: center ;
+	padding: 15px ;
+	background: url(../images/bg_pagetitle_machi.png) no-repeat center ;
+	margin-bottom: 0 ;
+}
+.modal .header div.h5 h5{
+	color: #fff ;
+	font-weight: bold ;
+	line-height: 1em ;
+	margin-bottom: 0 ;
+}
+.modal .header div.h5 h5 p.num{
+	position: relative ;
+	color: #1b89e7 ;
+	display: block ;
+	z-index: 10 ;
+	font-size: 2rem ;
+	margin-top: -20px ;
+	margin-bottom: 25px ;
+}
+.modal .header div.h5 h5 p.num::before{
+	position: absolute ;
+	left: 50% ;
+	transform: translateX(-50%) ;
+	top: 2px ;
+	font-size: 4rem ;
+	color: #fff ;
+	content: "\f041" ;
+	z-index: -1 ;
+	font-family: 'Font Awesome 5 Free' ;
+	text-shadow: 1px 1px 3px rgba(0, 48, 88, 0.2) ;
+}
+.modal .header div.h5 h5 p.erea{
+	color: #fff ;
+	font-size: 3rem ;
+	display: inline-block ;
+	line-height: 1em ;
+	margin-bottom: 0 ;
+	text-shadow: 1px 1px 3px rgba(0, 48, 88, 0.2) ;
+}
+
+.modal .body {
+	padding: 10px 0 ;
+}
+.modal .body .group{
+	padding: 10px 20px ;
+}
+.modal .body .name{
+	font-size: 1.25em ;
+	margin-bottom: 10px ;
+	line-height: 1em ;
+	border-bottom: rgba(95, 69, 51, 0.4) dotted 2px ;
+	padding-bottom: 5px ;
+}
+.modal .body .name::before{
+	font-family: 'Font Awesome 5 Free' ;
+	content: "\f015" ;
+	margin-right: 5px ;
+	color: rgba(27, 137, 231, 0.6) ;
+}
+.modal .body .copy{
+	display: none ;
+}
+.modal .body dl{
+	margin-bottom: 0 ;
+	padding: 5px 0 ;
+}
+.modal .body dl dt{
+	margin-bottom: 8px ;
+}
+.modal .body dl dt::before{
+	margin-right: 3px ;
+	font-family: 'Font Awesome 5 Free' ;
+	opacity: 0.3 ;
+}
+.modal .body dl.sub_erea dt::before{
+	content: "\f3c5" ;
+}
+.modal .body dl.address dt::before{
+	content: "\f276" ;
+}
+.modal .body dl.tel dt::before{
+	content: "\f095" ;
+}
+.modal .body dl dd{
+	line-height: 1.5em ;
+	font-size: 0.95em ;
+	padding-left: 10px ;
+}
+.modal .body dl.url{
+	display: none ;
+}
+.modal .body dl.url dd{
+	display: flex ;
+	max-width: 400px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+.modal .body dl.url dd a{
+	width: 50% ;
+	background-color: #1b89e7 ;
+	margin: 5px ;
+	text-align: center ;
+	color: #fff ;
+	padding: 5px ;
+	border-radius: 3px ;
+}
+.close_btm{
+	text-align: center ;
+}
+.close_btm button{
+	padding: 10px ;
+	width: 150px ;
+	text-align: center ;
+	color: #fff ;
+	background: url(../images/bg_blue.png) repeat center ;
+	border-radius: 3px ;
+	display: inline-block ;
+	float: none ;
+	opacity: 1 ;
+	text-shadow: none ;
+	box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15) ;
+}
+.close_btm button::before{
+	font-family: 'Font Awesome 5 Free' ;
+	content: "\f057" ;
+	margin-right: 5px ;
+}
+.close_btm button:hover{
+	cursor: pointer ;
+	opacity: 0.8 ;
+	color: #fff ;
+}
+@media (max-width: 767px){
+	.modal-dialog{
+		margin-top: 40px ;
+	}
 }

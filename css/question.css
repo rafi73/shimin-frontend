@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*==================================================
+
+ ボランティアをしたい、
+ボランティアを募集したい
+
+================================================== */
+
+/* h2 */
+#pagetitle.question .container .h2{
+	background-image: url(../images/bg_pagetitle_question.png) ;
+}
+#pagetitle.question .container .h2 span.s{
+	font-size: 0.85em ;
+}
+
+.comingsoon.container{
+	height: 400px ;
+	text-align: center ;
+	background: url(../images/bg_comingsoon.jpg) no-repeat center center ;
+}
+
+.comingsoon p.top{
+	padding-top: 50px ;
+	font-size: 1.5em ;
+	line-height: 2em ;
+	margin-bottom: 40px ;
+}
+
+
+@media (max-width: 767px){
+	.comingsoon.container{
+		background-size: 120% ;
+	}
+}
+
+
+

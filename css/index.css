@@ -153,6 +153,7 @@
 
 #contents_wrap{
 	background: url(../images/bg_wave_brown.png) bottom repeat-x ;
+	padding-bottom: 50px ;
 }
 #contents_wrap .container{
 	display: table ;
@@ -291,7 +292,7 @@
 .btn_blue a{
 	background: url(../images/bg_blue.png) repeat center ;
 	border-radius: 25px ;
-	box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.07) ;
+	box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.13) ;
 	color: #fff ;
 	padding: 15px ;
 	display: inline-block ;
@@ -299,6 +300,10 @@
 	margin: 0 5px ;
 	position: relative ;
 	letter-spacing: 0.2em ;
+}
+.btn_blue a:hover{
+	color: #fff ;
+	opacity: 0.8 ;
 }
 .btn_blue a::after{
 	position: absolute ;
@@ -727,5 +732,8 @@ ul.mini_menu li a:hover{
 		font-family: 'Font Awesome 5 Brands' ;
 		content: "\f082" ;
 		margin-right: 5px ;
+	}
+	.fb-page.fb_iframe_widget{
+		display: none ;
 	}
 }

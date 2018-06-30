@@ -1,0 +1,450 @@
+@charset "utf-8";
+
+/*==================================================
+
+ ボランティアをしたい、
+ボランティアを募集したい
+
+================================================== */
+
+/* h2 */
+#pagetitle.volunteer .container .h2{
+	background-image: url(../images/bg_pagetitle_vol.png) ;
+}
+
+/*==================================================
+
+ ボランティアをしたい
+
+================================================== */
+
+.section.vol01{
+	margin-bottom: 70px ;
+}
+.color_b{
+	color: #1b89e7 ;
+}
+
+/* sec01 */
+.vol01.sec01{
+	background: url(../images/bg_brown.png) repeat center ;
+}
+.section.vol01.sec01 .container{
+	padding-bottom: 90px ;
+}
+.vol01.sec01 .h3{
+	margin-bottom: 30px ;
+}
+.vol01.sec01 .left,
+.vol01.sec01 .right{
+	width: 50% ;
+	float: left ;
+}
+.vol01.sec01 p{
+	font-size: 1.16em ;
+	line-height: 1.8em ;
+	margin-bottom: 20px ;
+	z-index: 10 ;
+}
+.vol01.sec01 p.attention{
+	background-color: rgba(215, 162, 51, 0.1) ;
+	padding: 15px ;
+	font-size: 0.95em ;
+	line-height: 1.4em ;
+	margin-bottom: 30px ;
+}
+.vol01.sec01 .btn_blue{
+	text-align: right ;
+}
+.vol01.sec01 .btn_blue a::before{
+	content: "\f15c" ;
+}
+
+/* sec02 */
+.vol01.sec02{
+	margin-top: -180px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	max-width: 1000px ;
+	border: #ffcccc 5px dotted ;
+	border-radius: 15px ;
+	padding: 20px ;
+	background-color: #fff ;
+}
+.vol01.sec02 .title{
+	margin-top: -40px ;
+	text-align: center ;
+}
+.vol01.sec02 .body{
+	display: table ;
+}
+.vol01.sec02 .body .img{
+	width: 140px ;
+	display: table-cell ;
+	text-align: center ;
+}
+.vol01.sec02 .body .text{
+	display: table-cell ;
+	font-size: 1.2em ;
+	line-height: 1.7em ;
+	vertical-align: middle ;
+}
+
+/* sec03 */
+.vol01.sec03 .box{
+	padding: 40px 60px ;
+	background-color: #eefed9 ;
+	border-radius: 15px ;
+}
+.vol01.sec03 .title{
+	margin-top: -60px ;
+	margin-bottom: 20px ;
+	text-align: center ;
+}
+.vol01.sec03 .body{
+	display: table ;
+}
+.vol01.sec03 .body .left,
+.vol01.sec03 .body .right{
+	display: table-cell ;
+	vertical-align: top ;
+	width: 37% ;
+}
+.vol01.sec03 .body .center{
+	display: table-cell ;
+	vertical-align: top ;
+	width: 26% ;
+}
+.vol01.sec03 .body .center{
+	text-align: center ;
+}
+.vol01.sec03 .body dl{
+	padding: 10px 0 ;
+	border-bottom: #dceab6 dotted 3px ;
+}
+.vol01.sec03 .body dl dt{
+	margin-bottom: 15px ;
+	font-size: 1.45em ;
+	line-height: 1em ;
+	color: #aa8f61 ;
+	letter-spacing: 0.2em ;
+}
+.vol01.sec03 .body dl dt::before{
+	font-family: 'Font Awesome 5 Free';
+	content: "\f004" ;
+	font-size: 1.2em ;
+	color: #9ad85d ;
+}
+.vol01.sec03 .body dl:first-child{
+	margin-bottom: 20px ;
+}
+.vol01.sec03 .body dl:first-child dt::before{
+	color: #cae55f ;
+}
+
+/* sec04 */
+.vol01.sec04 .box{
+	padding: 30px 40px ;
+	background-color: #f8fed9 ;
+	border-radius: 15px ;
+}
+.vol01.sec04 .box .col{
+	width: 50% ;
+	float: left ;
+	padding: 10px 20px ;
+}
+.vol01.sec04 .box .col p{
+	padding: 10px 0 ;
+	border-bottom: #f6d594 2px dotted ;
+	font-size: 1.1em ;
+}
+.vol01.sec04 .box .col p::before{
+	font-family: 'Font Awesome 5 Free';
+	content: "\f00c" ;
+	font-size: 0.9em ;
+	color: #ef6a4a ;
+	margin-right: 10px ;
+}
+.vol01.sec04 .box .col p span{
+	display: block ;
+	margin-top: 15px ;
+	text-align: right ;
+	font-size: 0.75em ;
+}
+.vol01.sec04 .box .col p span a{
+	color: #1b89e7 ;
+	text-decoration: underline ;
+}
+
+/* sec05 */
+.vol01.sec05 .title{
+	text-align: center ;
+	margin-bottom: 25px ;
+	font-size: 1.25em ;
+	line-height: 1.6em ;
+}
+.vol01.sec05 ul.voltype{
+	text-align: center ;
+	margin-bottom: 30px ;
+	max-width: 900px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+.vol01.sec05 ul.voltype li{
+	display: inline-block ;
+}
+.vol01.sec05 .copy{
+	margin-top: 50px ;
+	text-align: center ;
+	font-size: 1.35em ;
+	line-height: 1.7em ;
+}
+@media (max-width: 991px){
+	/* 01 */
+	.vol01.sec01 .left,
+	.vol01.sec01 .right{
+		width: 100% ;
+		float: none ;
+		text-align: center ;
+	}
+	.vol01.sec01 .left br{
+		display: none ;
+	}
+	.vol01.sec01 .btn_blue{
+	text-align: center ;
+	}
+}
+@media (max-width: 767px){
+	/* 02 */
+	.vol01.sec02{
+		margin-top: -150px ;
+	}
+	.vol01.sec02 .title img{
+		width: 200px ;
+	}
+	.vol01.sec02 .body,
+	.vol01.sec02 .body .img,
+	.vol01.sec02 .body .text{
+		width: 100% ;
+		display: block ;
+	}
+	.vol01.sec02 .body .text{
+		font-size: 1em ;
+	}
+	/* sec03 */
+	.vol01.sec03 .box{
+		padding: 20px ;
+	}
+	.vol01.sec03 .title{
+		margin-top: -30px ;
+	}
+	.vol01.sec03 .body,
+	.vol01.sec03 .body .left,
+	.vol01.sec03 .body .right{
+		width: 100% ;
+		display: block ;
+	}
+	.vol01.sec03 .body .center{
+		display: none ;
+	}
+	.vol01.sec03 .body dl dt{
+		font-size: 1.2em ;
+	}
+	/* sec04 */
+	.vol01.sec04 .box{
+		padding: 20px ;
+	}
+	.vol01.sec04 .box .col{
+		width: 100% ;
+		padding: 0 ;
+		float: none ;
+	}
+	/* sec05 */
+	.vol01.sec05 ul.voltype li img{
+		width: 100px ;
+	}
+}
+
+/*==================================================
+
+ ボランティアを募集したい
+
+================================================== */
+
+.section.vol02{
+	margin-bottom: 70px ;
+}
+/* sec01 */
+.vol02.sec01{
+	background: url(../images/bg_brown.png) repeat center ;
+	padding-bottom: 80px ;
+}
+.vol02.sec01 .h3{
+	margin-bottom: 15px ;
+	text-align: center ;
+}
+.vol02.sec01 ul.step{
+	max-width: 1150px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+.vol02.sec01 ul.step li{
+	float: left ;
+	width: 33% ;
+	text-align: center ;
+	position: relative ;
+}
+.vol02.sec01 ul.step li::after{
+	background: url(../images/illust_vol2_arrow.png) no-repeat center center ;
+	position: absolute ;
+	height: 76px ;
+	width: 76px ;
+	content: " " ;
+	z-index: 100 ;
+}
+.vol02.sec01 ul.step li:nth-child(1)::after,
+.vol02.sec01 ul.step li:nth-child(2)::after{
+	right: -40px ;
+	top: 50% ;
+	transform: translateY(-50%) ;
+}
+.vol02.sec01 ul.step li:last-child::after{
+	bottom: -50px ;
+	left: 20px ;
+	transform: rotate(135deg) ;
+}
+.vol02.sec01 ul.step li a{
+	color: #1b89e7 ;
+	text-decoration: underline ;
+}
+.vol02.sec01 ul.step li img{
+	max-width: 100% ;
+}
+.vol02.sec01 .step_sp{
+	display: none ;
+}
+
+/* 02 */
+.vol02.sec02{
+	margin-top: -170px ;
+}
+.vol02.sec02 .box{
+	padding: 20px 20px 30px ;
+	background-color: #fff ;
+	border-radius: 15px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	border: rgba(27, 137, 231, 0.30) 5px dotted ;
+}
+.vol02.sec02 .title{
+	margin-top: -70px ;
+	margin-bottom: 30px ;
+	text-align: center ;
+}
+.vol02.sec02 .group{
+	display: flex ;
+	flex-wrap: wrap ;
+}
+.vol02.sec02 dl{
+	width: 33% ;
+	padding: 0 15px ;
+	border-right: rgba(27, 137, 231, 0.2) dotted 2px ;
+}
+.vol02.sec02 dl:last-child{
+	border-right: 0 ;
+}
+.vol02.sec02 dl dt{
+	margin-bottom: 20px ;
+	font-size: 1.2em ;
+	line-height: 1.4em ;
+	text-align: center ;
+	height: 70px ;
+}
+.vol02.sec02 dl dt span{
+	font-size: 1.15em ;
+	color: #1b89e7 ;
+}
+.vol02.sec02 dl dt span.num{
+	width: 100% ;
+	text-align: center ;
+	display: block ;
+
+}
+.vol02.sec02 dl dd{
+	line-height: 1.5em ;
+}
+
+/* 03 */
+.vol02.sec03 ul li{
+	margin-bottom: 10px ;
+	line-height: 1.3em ;
+	padding-left: 20px ;
+	position: relative ;
+}
+.vol02.sec03 ul li::before{
+	position: absolute ;
+	font-family: 'Font Awesome 5 Free';
+	content: "\f058" ;
+	color: #1b89e7 ;
+	left: 0 ;
+	top: 0 ;
+}
+
+/* 04 */
+.vol02.sec04 p{
+	line-height: 1.4em ;
+}
+
+
+@media (max-width: 991px){
+	.vol02.sec01 ul.step li::after{
+		width: 40px ;
+		height: 40px ;
+		background-size: 100% ;
+	}
+	.vol02.sec01 ul.step li:nth-child(1)::after,
+	.vol02.sec01 ul.step li:nth-child(2)::after{
+		right: -20px ;
+	}
+}
+@media (max-width: 767px){
+	/* sec01 */
+	.vol02.sec01 ul.step{
+		display: none ;
+	}
+	.vol02.sec01 .step_sp{
+		display: block ;
+	}
+	/* sec02 */
+	.vol02.sec02 .box{
+		padding: 15px ;
+	}
+	.vol02.sec02 .title{
+		margin-top: -40px ;
+		margin-bottom: 15px ;
+	}
+	.vol02.sec02 .title img{
+		width: 50px ;
+	}
+	.vol02.sec02 .group dl{
+		display: block ;
+		width: 100% ;
+		border-right: 0 ;
+		border-bottom: rgba(27, 137, 231, 0.2) dotted 2px ;
+		margin-bottom: 15px ;
+		padding-bottom: 15px ;
+	}
+	.vol02.sec02 .group dl dt{
+		height: auto ;
+		margin-bottom: 10px ;
+	}
+	.vol02.sec02 .group dl dt br{
+		display: none ;
+	}
+}
+
+
+
+
+
+

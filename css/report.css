@@ -106,6 +106,20 @@ ul.year_btns li a.active{
 
 .scrollspy-example{
 	margin-top: -50px ;
+	position: relative ;
+}
+.scrollspy-example::before{
+	position: absolute ;
+	top: 100px ;
+	padding-top: 40px ;
+	color: #ccc ;
+	content: "現在掲載可能な事業報告はありません。" ;
+	background-color: #f3f3f3 ;
+	border-radius: 10px ;
+	width: 100% ;
+	height: 100px ;
+	text-align: center ;
+	z-index: -1 ;
 }
 .report_body{
 	margin-bottom: 30px ;
